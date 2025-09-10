@@ -18,9 +18,9 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
     - [ ] Criar um formulário para adicionar novos eventos
     - [ ] Implementar a exibição dos eventos no calendário
 - [ ] **Backend:**
-    - [ ] Criar a API para CRUD (Create, Read, Update, Delete) de eventos
+    - [x] Criar a API para CRUD (Create, Read, Update, Delete) de eventos
     - [x] Definir o modelo de dados para os eventos no banco de dados
-    - [ ] Implementar a lógica para salvar, buscar, atualizar e deletar eventos
+    - [x] Implementar a lógica para salvar, buscar, atualizar e deletar eventos
 
 ## Fase 3: Autenticação de Usuários
 

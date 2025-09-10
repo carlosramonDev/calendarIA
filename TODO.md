@@ -47,6 +47,6 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 
 - [ ] Implementar notificações por email ou push
 - [ ] Adicionar a funcionalidade de convidar outros usuários para eventos
-- [ ] Melhorar a interface do usuário e a experiência do usuário (UI/UX)
+- [x] Melhorar a interface do usuário e a experiência do usuário (UI/UX)
 - [ ] Escrever testes unitários e de integração
 - [ ] Fazer o deploy da aplicação

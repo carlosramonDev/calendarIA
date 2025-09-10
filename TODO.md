@@ -39,9 +39,9 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
     - [ ] Criar um campo de input para linguagem natural (e.g., "Agendar reunião com João amanhã às 10h")
     - [ ] Enviar o texto para o backend para processamento
 - [ ] **Backend:**
-    - [ ] Escolher um serviço de NLP (Natural Language Processing)
-    - [ ] Criar um endpoint na API para receber o texto em linguagem natural
-    - [ ] Implementar a lógica para processar o texto, extrair as informações do evento (título, data, hora, etc.) e criar o evento no banco de dados
+    - [x] Escolher um serviço de NLP (Natural Language Processing)
+    - [x] Criar um endpoint na API para receber o texto em linguagem natural
+    - [x] Implementar a lógica para processar o texto, extrair as informações do evento (título, data, hora, etc.) e criar o evento no banco de dados
 
 ## Fase 5: Melhorias e Refinamento
 

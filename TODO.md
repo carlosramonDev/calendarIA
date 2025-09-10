@@ -27,7 +27,7 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 - [ ] **Frontend:**
     - [x] Criar as páginas de login e registro
     - [x] Implementar o fluxo de autenticação no frontend
-    - [ ] Proteger as rotas que exigem autenticação
+    - [x] Proteger as rotas que exigem autenticação
 - [ ] **Backend:**
     - [x] Criar a API para registro e login de usuários
     - [x] Definir o modelo de dados para os usuários no banco de dados

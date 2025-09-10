@@ -25,7 +25,7 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 ## Fase 3: Autenticação de Usuários
 
 - [ ] **Frontend:**
-    - [ ] Criar as páginas de login e registro
+    - [x] Criar as páginas de login e registro
     - [ ] Implementar o fluxo de autenticação no frontend
     - [ ] Proteger as rotas que exigem autenticação
 - [ ] **Backend:**

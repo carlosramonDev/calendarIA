@@ -6,7 +6,7 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 
 - [ ] Configurar o ambiente de desenvolvimento local
 - [x] Inicializar o projeto com um framework frontend (e.g., React, Vue)
-- [ ] Configurar o backend com um framework (e.g., Node.js/Express, Python/FastAPI)
+- [x] Configurar o backend com um framework (e.g., Node.js/Express, Python/FastAPI)
 - [ ] Escolher e configurar um banco de dados (e.g., MongoDB, PostgreSQL)
 - [x] Definir a estrutura de pastas do projeto
 

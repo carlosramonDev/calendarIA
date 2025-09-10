@@ -13,7 +13,7 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 ## Fase 2: Funcionalidades Essenciais do Calendário
 
 - [ ] **Frontend:**
-    - [ ] Criar o componente de visualização do calendário (mês, semana, dia)
+    - [x] Criar o componente de visualização do calendário (mês, semana, dia)
     - [ ] Implementar a navegação entre os meses/semanas/dias
     - [ ] Criar um formulário para adicionar novos eventos
     - [ ] Implementar a exibição dos eventos no calendário

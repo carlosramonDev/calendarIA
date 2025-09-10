@@ -15,7 +15,7 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 - [ ] **Frontend:**
     - [x] Criar o componente de visualização do calendário (mês, semana, dia)
     - [x] Implementar a navegação entre os meses/semanas/dias
-    - [ ] Criar um formulário para adicionar novos eventos
+    - [x] Criar um formulário para adicionar novos eventos
     - [ ] Implementar a exibição dos eventos no calendário
 - [ ] **Backend:**
     - [x] Criar a API para CRUD (Create, Read, Update, Delete) de eventos

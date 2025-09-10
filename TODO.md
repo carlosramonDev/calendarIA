@@ -45,7 +45,7 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 
 ## Fase 5: Melhorias e Refinamento
 
-- [ ] Implementar notificações por email ou push
+- [x] Implementar notificações por email ou push
 - [ ] Adicionar a funcionalidade de convidar outros usuários para eventos
 - [x] Melhorar a interface do usuário e a experiência do usuário (UI/UX)
 - [x] Escrever testes unitários e de integração

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Calendário de Agendamentos</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Bem-vindo!</h1>
+                <p>Faça login para acessar seu calendário</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Digite sua senha" required>
+                        <span class="toggle-password-visibility" id="togglePassword">👁️</span>
+                    </div>
+                </div>
+                <div class="form-group-inline">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Lembrar-me</label>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <div class="login-footer">
+                <p id="formMessage">Digite um nome de usuário e senha. Se o usuário não existir, um novo será criado.</p>
+                <button type="button" id="resetUsers" class="btn-reset">Limpar Usuários Salvos</button>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

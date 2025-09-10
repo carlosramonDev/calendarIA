@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prevMonth" class="nav-btn">&lt;</button>
+            <h1 id="currentMonth"></h1>
+            <button id="nextMonth" class="nav-btn">&gt;</button>
+        </div>
+        
+        <div class="user-info">
+            <span id="userName"></span>
+            <button id="logoutBtn" class="btn btn-logout">Sair</button>
+        </div>
+        
+        <div class="calendar-actions">
+            <button id="viewAppointments" class="btn btn-secondary">
+                <span class="icon">📅</span>
+                Ver Agendamentos
+            </button>
+        </div>
+        
+        <div class="calendar-grid">
+            <div class="day-header">Dom</div>
+            <div class="day-header">Seg</div>
+            <div class="day-header">Ter</div>
+            <div class="day-header">Qua</div>
+            <div class="day-header">Qui</div>
+            <div class="day-header">Sex</div>
+            <div class="day-header">Sáb</div>
+            
+            <div id="calendarDays" class="calendar-days"></div>
+        </div>
+    </div>
+
+    <!-- Popup de Agendamento -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Agendar Compromisso</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="selected-date">
+                    <strong>Data selecionada:</strong>
+                    <span id="selectedDateText"></span>
+                </div>
+                
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="appointmentTitle">Título do Compromisso:</label>
+                        <input type="text" id="appointmentTitle" placeholder="Ex: Reunião com cliente" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentTime">Horário:</label>
+                        <input type="time" id="appointmentTime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentDescription">Descrição:</label>
+                        <textarea id="appointmentDescription" placeholder="Detalhes do compromisso..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentType">Tipo:</label>
+                        <select id="appointmentType">
+                            <option value="meeting">Reunião</option>
+                            <option value="appointment">Consulta</option>
+                            <option value="event">Evento</option>
+                            <option value="reminder">Lembrete</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancelAppointment" class="btn btn-cancel">Cancelar</button>
+                        <button type="submit" class="btn btn-save">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Lista de Agendamentos -->
+    <div id="appointmentsListModal" class="modal">
+        <div class="modal-content appointments-modal">
+            <div class="modal-header">
+                <h2>Meus Agendamentos</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="appointments-filters">
+                    <select id="filterMonth" class="filter-select">
+                        <option value="all">Todos os meses</option>
+                    </select>
+                    <select id="filterType" class="filter-select">
+                        <option value="all">Todos os tipos</option>
+                        <option value="meeting">Reunião</option>
+                        <option value="appointment">Consulta</option>
+                        <option value="event">Evento</option>
+                        <option value="reminder">Lembrete</option>
+                    </select>
+                </div>
+                
+                <div id="appointmentsList" class="appointments-list">
+                    <!-- Lista de agendamentos será inserida aqui -->
+                </div>
+                
+                <div id="noAppointments" class="no-appointments" style="display: none;">
+                    <div class="no-appointments-icon">📅</div>
+                    <h3>Nenhum agendamento encontrado</h3>
+                    <p>Clique em uma data no calendário para criar seu primeiro agendamento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalhes do Agendamento -->
+    <div id="appointmentDetailsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Detalhes do Agendamento</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="appointmentDetails" class="appointment-details">
+                    <!-- Detalhes do agendamento serão inseridos aqui -->
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" id="editAppointment" class="btn btn-edit">Editar</button>
+                    <button type="button" id="deleteAppointment" class="btn btn-delete">Excluir</button>
+                    <button type="button" id="closeDetails" class="btn btn-cancel">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ import Calendar from './components/Calendar';
 import EventForm from './components/EventForm';
 import Login from './components/Login';
 import Register from './components/Register';
+import NaturalLanguageInput from './components/NaturalLanguageInput';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -107,6 +108,30 @@ function App() {
     setEvents([]);
   };
 
+  // Handle natural language processing
+  const handleProcessNaturalLanguage = async (text) => {
+    try {
+      const response = await fetch('http://localhost:3001/nlp/parse', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-token': token,
+        },
+        body: JSON.stringify({ text }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert('Event created from natural language!');
+        fetchEvents(); // Refresh events
+      } else {
+        alert(data.message || 'Failed to process natural language.');
+      }
+    } catch (error) {
+      console.error('Error processing natural language:', error);
+      alert('Failed to process natural language.');
+    }
+  };
+
   return (
     <Router>
       <div className="App">
@@ -120,6 +145,7 @@ function App() {
             element={
               isAuthenticated ? (
                 <>
+                  <NaturalLanguageInput onProcessText={handleProcessNaturalLanguage} />
                   <EventForm onAddEvent={handleAddEvent} />
                   <Calendar events={events} />
                 </>

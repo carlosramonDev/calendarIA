@@ -36,8 +36,8 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
 ## Fase 4: Integração com IA
 
 - [ ] **Frontend:**
-    - [ ] Criar um campo de input para linguagem natural (e.g., "Agendar reunião com João amanhã às 10h")
-    - [ ] Enviar o texto para o backend para processamento
+    - [x] Criar um campo de input para linguagem natural (e.g., "Agendar reunião com João amanhã às 10h")
+    - [x] Enviar o texto para o backend para processamento
 - [ ] **Backend:**
     - [x] Escolher um serviço de NLP (Natural Language Processing)
     - [x] Criar um endpoint na API para receber o texto em linguagem natural

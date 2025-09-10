@@ -29,9 +29,9 @@ Este é um plano de desenvolvimento para o projeto CalendarIA, um calendário de
     - [ ] Implementar o fluxo de autenticação no frontend
     - [ ] Proteger as rotas que exigem autenticação
 - [ ] **Backend:**
-    - [ ] Criar a API para registro e login de usuários
+    - [x] Criar a API para registro e login de usuários
     - [x] Definir o modelo de dados para os usuários no banco de dados
-    - [ ] Implementar a lógica de autenticação com tokens (e.g., JWT)
+    - [x] Implementar a lógica de autenticação com tokens (e.g., JWT)
 
 ## Fase 4: Integração com IA
 
